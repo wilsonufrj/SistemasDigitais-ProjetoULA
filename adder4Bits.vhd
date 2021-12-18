@@ -32,5 +32,11 @@ BEGIN
 	
 	fourthFullAdder: fullAdder
 		port map(a1(3),b1(3),carryOutSignal(2),result(3),carryOut);
+		
+		
+	ZERO <= '1' when (result = "0000") else '0';
+	SIGN <= result(3); 
+	OVERFLOW <= carryOutSignal(2) XOR carryOutSignal(3);
+	COUT <= carryOutSignal(3);
 	
 END main;
