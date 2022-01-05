@@ -1,8 +1,11 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
 ENTITY halfAdder IS 
 	PORT(
-		a1,b1				:in BIT;
-		result			:out BIT;
-		carryOut			:out BIT
+		a1,b1				:in std_logic;
+		result			:out std_logic;
+		carryOut			:out std_logic
 	);
 END halfAdder;
 
